@@ -80,3 +80,7 @@ hr.rounded {
 hr.solid {
     border-top: 1px solid #bbb;
 }
+
+a {
+    color: #3391ff;
+}
