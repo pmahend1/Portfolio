@@ -1,86 +1,239 @@
-/* Add your own custom styles here */
+:root {
+    --primary-color: #1e3a8a; /* Navy Blue */
+    --primary-light: #5e74ab; /* Lighter Navy */
+    --secondary-color: #48a9a6; /* Soft Teal for Underline */
+    --background-color: #ffffff; /* White Background */
+    --text-color: #1f2937; /* Dark Gray Text */
+    --link-color: #1e40af; /* Dark Blue Links */
+
+    /* Dark Mode Variables */
+    --dark-bg: #2c2c38; /* Softer Dark Mode Background */
+    --dark-section-bg: #3a3a4a; /* Section Background in Dark Mode */
+    --dark-text: #e0e0e0; /* Light Text for Dark Mode */
+    --dark-link-color: #a3d9ff; /* Soft Blue Links for Dark Mode */
+    --transition: all 0.3s ease-in-out;
+}
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #2a2828;
-    color: #fefefe;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition);
 }
 
-header,
-nav,
-section,
-footer {
-    padding: 20px;
-}
-
-header {
-    background-color: #010101;
-    color: #ABC;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-h3 {
-    color: #ABC;
-}
-
-h1,
-h2 {
-    color: rgb(105, 132, 159);
-}
-
-nav li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    color: #ABC;
-    font-weight: bold;
-    font-size: large;
-    text-decoration: none
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-.project {
-    margin-bottom: 12px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem;
     text-align: center;
+    color: white;
 }
 
-footer p {
-    margin: 0;
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-img {
-    width: 200px;
-    height: 200px;
+.profile-picture {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-hr.rounded {
-    border-top: 4px solid #bbb;
-    border-radius: 5px;
+nav {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center items vertically */
+    font-weight: bold;
+    background-color: var(--primary-bg);
 }
 
-hr.solid {
-    border-top: 1px solid #bbb;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0.25rem;
+    margin: 0.5rem;
+    gap:6rem;
+
+}
+nav li {
+    margin: 0; /* Remove default margin */
+    padding: 0;
 }
 
+/* General nav link styling */
+nav li a {
+    text-decoration: none !important; /* Completely disable underline */
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+
+    transition: var(--transition);
+    position: relative;
+}
+
+/* Green underline effect using ::after */
+nav li a::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: var(--secondary-color); /* Green underline */
+    width: 0;
+    transition: width 0.3s;
+}
+
+/* Apply underline effect on hover/focus */
+nav li a:hover::after, 
+nav li a:focus::after {
+    width: 100%; /* Animate the green underline */
+}
+
+/* Firefox-specific fix to remove native link styles */
+@-moz-document url-prefix() {
+    nav li a {
+        text-decoration-skip-ink: none; /* Prevent Firefox from sneaking in underlines */
+    }
+}
+
+
+/* Toggle button for theme switching */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* Section content styling */
+main section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-left: 4px solid var(--secondary-color);
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    text-align: justify;
+}
+
+/* Dark Mode Styling */
+body.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark main section {
+    background-color: var(--dark-section-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark nav li a {
+    color: var(--dark-link-color);
+}
+
+body.dark nav li a::after {
+    background-color: var(--secondary-color); /* Keep the same green underline */
+}
+
+/* Link styling for readability */
 a {
-    color: #3391ff;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode link styling */
+body.dark a {
+    color: var(--dark-link-color);
+}
+
+#work h2 {
+    margin-bottom: 0.3rem; /* Optional: Adjust this value for closer spacing */
+}
+
+/* Divider for each project in the Work section */
+/*
+#work .project {
+    padding: 0rem 1rem 1rem 0rem;
+    border-bottom: 1px solid var(--primary-light);
+}
+*/
+
+/* Remove the divider for the last project to keep it clean */
+#work .project:last-child {
+    border-bottom: none;
+}
+
+#work .project:first-child {
+    padding-top: 0; 
+}
+
+/* Project container styling */
+#work .project {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--primary-light);
+}
+
+/* Title styling for each project */
+#work .project h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    /* color: var(--primary-light); */
+}
+
+/* Flex layout for image and description */
+#work .project-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem; /* Space between details and links */
+}
+
+#work .project-details img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#work .project-description {
+    flex-grow: 1;
+    text-align: justify;
+}
+
+/* Styling for the links */
+#work .project-description a {
+    text-decoration: none;
+}
+
+#work .project-description a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design: Stack image and description vertically on small screens */
+@media (max-width: 768px) {
+    #work .project-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #work .project-details img {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px;
+    }
 }

@@ -1,122 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Prateek Mahendrakar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+<body class="dark">
 
-<body>
-    <header>
-        <h1>Prateek Mahendrakar</h1>
-        <h2>Senior Mobile Application Developer</h2>
+    <header class="header">
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="title">
+                <h1>Prateek Mahendrakar</h1>
+                <p>Cross-Platform Mobile App Developer</p>
+            </div>
+        </div>
     </header>
+
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
 
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#open-source-contribution">Open Source</a></li>
             <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
 
-    <section id="about">
-        <div>
-            <img src="./profile_picture.jpg" alt="Profile Picture">
-        </div>
-        <p>I am a dedicated and detail-oriented mobile application developer with over 10 years of experience in the
-            industry. I have a strong background in Xamarin Forms and SwiftUI, and I constantly strive to stay
-            up-to-date with the latest trends and advancements in mobile app development. My goal is to create apps that
-            not only meet the functional requirements but also provide a seamless and delightful user experience.</p>
-    </section>
+    <main class="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a software engineer with over 11 years of experience, with 7 years focused on cross-platform mobile app development. My passion lies in building seamless, scalable applications that improve user experiences across devices.</p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <hr class="rounded"> 
-        <ul>
-            <li>Languages: C#, Swift, Java, Python</li>
-            <li>Frameworks: Xamarin Forms, .NET MAUI, SwiftUI</li>
-            <li>IDEs: Visual Studio, XCode, Visual Studio Code, VSCodium</li>
-            <li>Design Patterns: MVVM, VIPER, MVC</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C#, Swift, Java, Python</li>
+                <li><strong>Frameworks & Tools:</strong> Xamarin Forms, .NET MAUI, SwiftUI</li>
+                <li><strong>IDEs:</strong>  Visual Studio, Rider, XCode, Visual Studio Code, VSCodium</li>
+                <li><strong>Design Patterns:</strong> MVVM, VIPER, MVC</li>
+            </ul>
+        </section>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <hr class="rounded"> 
-        <div class="project">
-            <h3>Sweatherift</h4>
-            <p><strong>Description: </strong>A simple SwiftUI weather app.</p>
-            <p><strong>Platform: </strong>iOS</p>
-            <p><strong>Technologies Used: </strong>Swift, SwiftUI</p>
-            <p><strong>Role: </strong>App development</p>
-            <p><strong>Links:</strong> <a href="https://apps.apple.com/app/sweatherift/id6449203262">AppStore</a>
-        </div>
-        <hr class="solid"> 
-        <div class="project">
-            <h3>HealthEquity</h4>
-            <p><strong>Description:</strong>HealthEquity HSA mobile app.</p>
-            <p><strong>Platform:</strong>iOS, Android</p>
-            <p><strong>Technologies Used:</strong>Swift, SwiftUI, Xamarin Forms</p>
-            <p><strong>Role:</strong>Transitioned app from Xamarin Forms to SwiftUI</p>
-            <p><strong>Links:</strong> <a href="https://play.google.com/store/apps/details?id=com.healthequity.healthequitymobile">PlayStore</a> <a href="https://apps.apple.com/us/app/healthequity-mobile/id642959434">AppStore</a></p>
-        </div>
-        <hr class="solid"> 
-        <div class="project">
-            <h3>Crowdtap</h4>
-            <p><strong>Description: </strong>A market research app.</p>
-            <p><strong>Platform: </strong>iOS, Android</p>
-            <p><strong>Technologies Used: </strong>Xamarin Forms</p>
-            <p><strong>Role: </strong>Lead mobile app development team</p>
-            <p><strong>Links: </strong> <a href="https://play.google.com/store/apps/details?id=com.suzy.droid">PlayStore</a> <a href="https://apps.apple.com/us/app/crowdtap-surveys-opinions/id1440330471">AppStore</a></p>
-        </div>
-        <hr class="solid"> 
-        <div class="project">
-            <h3>Glidden</h4>
-            <p><strong>Description: </strong>PPG Paints App</p>
-            <p><strong>Platform: </strong>iOS, Android</p>
-            <p><strong>Technologies Used: </strong>Xamarin Forms</p>
-            <p><strong>Role: </strong>App development</p>
-            <p><strong>Links:</strong> <a href="https://play.google.com/store/apps/details?id=com.ppg.ppg_ppgac_mobileapp_glidden">PlayStore</a> <a href="https://apps.apple.com/us/app/procrastipainted-by-glidden/id1492393963">AppStore</a></p>
-        </div>
-        <hr class="solid"> 
-        <div class="project">
-            <h3>Open Source Contribution</h4>
-                <ul>
-                    <li><a href="https://github.com/pmahend1/PrettyXML">PrettyXML</a>: A Visual Studio Code extension to format XML.</li>
-                    <li><a href="https://github.com/pmahend1/resxpress">ResXpress</a>: A Visual Studio Code resx editor extension.</li>
-                    <li><a href="https://github.com/pmahend1/XamUtilities">XamUtilities</a>: A nuget utility for shapes in Xamarin Forms.</li>
-                    <li><a href="https://github.com/pmahend1/PList-Parser">PList-Parser</a>: Plist parser in dotnet and powershell core.</li>
-                    <li><a href="https://github.com/pmahend1/PrettyXML.VSMac">PrettyXML.VSMac</a>: A Visual Studio for Mac 2019/2022 extension to format XML.</li>
-                    <li><a href="https://github.com/pmahend1/XCode-Themes">XCode-Themes</a>: XCode IDE themes.</li>
-                    <li><a href="https://github.com/pmahend1/PowershellScripts">PowerShell Scripts</a>: A powershell gallery modules.<ul>
-                    <li><a href="https://www.powershellgallery.com/packages/GitCleanOrphanBranches/">GitCleanOrphanBranches</a>: Deletes orphan branches deleted from remote but present in local</li>
-                    <li><a href="https://www.powershellgallery.com/packages/DeleteBinObjFolders/">DeleteBinObjFolders</a>: Delete bin, obj folders recursively.</li>
-                </ul>
-        </div>
-        <hr class="solid"> 
-    </section>
+        <section id="work">
+            <h2>Work</h2>
+            
+            <div class="project">
+                <h3>4SEE by Grote</h3>
+                <div class="project-details">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1d/53/1d/1d531dee-004f-f508-99bb-c5af6e215c1c/AppIcons-0-0-1x_U007emarketing-0-7-0-0-85-220.png/246x0w.webp" alt="4SEE Image">
+                    <div class="project-description">
+                        <p>An app interface for commissioning and synchronizing telematics of
+                            Grote Industries' lighting system via BLE. </p>
+                        <a href="https://apps.apple.com/mg/app/4see-by-grote/id1571307924" target="_blank">App Store</a> | 
+                        <a href="https://play.google.com/store/apps/details?id=com.grote.x4see" target="_blank">Play Store</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project">
+                <h3>Sweatherift</h3>
+                <div class="project-details">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ad/0a/79/ad0a792e-63aa-b98e-3956-357dab2324f4/AppIcon-0-1x_U007epad-0-85-220-0.png/246x0w.png" alt="Sweatherift Image">
+                    <div class="project-description">
+                        <p>SwiftUI weather app.</p>
+                        <a href="https://apps.apple.com/us/app/sweatherift/id6449203262" target="_blank">App Store</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project">
+                <h3>HealthEquity</h3>
+                <div class="project-details">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/a5/1b/b9a51b6a-c1fe-b730-edae-e7ec2779fdfd/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/246x0w.webp" alt="HealthEquity Image">
+                    <div class="project-description">
+                        <p>HealthEquity HSA mobile app. Transitioned app from Xamarin Forms to SwiftUI </p>
+                        <a href="https://apps.apple.com/us/app/healthequity-mobile/id642959434" target="_blank">App  Store</a> | <a href="https://play.google.com/store/apps/details?id=com.healthequity.healthequitymobile" target="_blank">Play Store</a>
+                    </div>
+                </div>
+            </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <hr class="rounded"> 
-        <p>I'm always open to new opportunities and collaborations. If you'd like to discuss a potential project, have
-            any questions, or just want to say hello, feel free to reach out to me using the contact information below:
-        </p>
-        <ul>
-            <li><strong>Email: </strong><a href="mailto:prateek.mahendrakar@gmail.com">prateek.mahendrakar@gmail.com</a></li>
-            <li><strong>Phone: </strong><a href="tel:9803186736">(980)318-6736</a></li>
-            <li><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/prateekmahendrakar/">LinkedIn Profile</a></li>
-            <li><strong>GitHub: </strong> <a href="https://github.com/pmahend1">GitHub Profile</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2023 Prateek Mahendrakar | All rights reserved.</p>
-    </footer>
+            <div class="project">
+                <h3>Crowdtap</h3>
+                <div class="project-details">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8c/c5/b7/8cc5b77a-7afc-2148-de8b-b822379791d9/AppIcon-1x_U007emarketing-0-6-85-220-0.png/246x0w.webp" alt="Crowdtap Image">
+                    <div class="project-description">
+                        <p> A market research survey app.</p>
+                        <a href="https://apps.apple.com/us/app/crowdtap-surveys-opinions/id1440330471" target="_blank">App Store</a> | 
+                        <a href="https://play.google.com/store/apps/details?id=com.suzy.droid" target="_blank">Play Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Glidden</h3>
+                <div class="project-details">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/14/f8/6a14f80f-7f0d-9f72-fc06-44683a3a4782/AppIconGlidden-0-1x_U007emarketing-0-7-0-0-sRGB-85-220-0.png/246x0w.webp" alt="Glidden Image">
+                    <div class="project-description">
+                        <p>PPG Paints App</p>
+                        <a href="https://apps.apple.com/us/app/glidden/id1492393963" target="_blank">App Store</a> |
+                        <a href="https://play.google.com/store/apps/details?id=com.ppg.ppg_ppgac_mobileapp_glidden" target="_blank">Play Store</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="open-source-contribution">
+            <h2>Open Source</h2>
+            <ul>
+                <li><a href="https://github.com/pmahend1/PrettyXML" target="_blank">Pretty XML</a> - A Visual Studio Code extension to format XML.</li>
+                <li><a href="https://github.com/pmahend1/resxpress" target="_blank">ResXpress</a> - A Visual Studio Code resx editor extension.</li>
+                <li><a href="https://github.com/pmahend1/XamUtilities" target="_blank">XamUtilities</a> - A nuget utility for shapes in Xamarin Forms.</li>
+                <li><a href="https://github.com/pmahend1/PList-Parser" target="_blank">PList-Parser</a> - Plist parser in dotnet and powershell core.</li>
+                <li><a href="https://github.com/pmahend1/PrettyXML.VSMac" target="_blank">PrettyXML Visual Studio for Mac</a> - A Visual Studio for Mac 2019/2022 extension to format XML.</li>
+                <li><a href="https://github.com/pmahend1/PowershellScripts" target="_blank">PowerShell Scripts</a> - A collection of published powershell gallery modules.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <ul>
+                <li>Email: <a href="mailto:prateek.mahendrakar@gmail.com">prateek.mahendrakar@gmail.com</a></li>
+                <li>Phone: <a href="tel:+1(980)318-6736">+1(980)318-6736</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/prateekmahendrakar" target="_blank">linkedin.com/in/prateekmahendrakar</a></li>
+                <li>GitHub: <a href="https://github.com/pmahend1" target="_blank">github.com/pmahend1</a></li>
+            </ul>
+        </section>
+    </main>
+
     <script src="script.js"></script>
-</body>
 
+</body>
 </html>
