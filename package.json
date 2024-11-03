@@ -1,0 +1,11 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pmahend1/Portfolio.git",
+  "author": "pmahend1 <prateek.mahendrakar@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.6.3"
+  }
+}
